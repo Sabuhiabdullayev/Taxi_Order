@@ -1,0 +1,10 @@
+﻿
+@model AppUser
+
+@{
+    ViewData["Title"] = "Surucu Haqqinda" ;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/driver.css" rel="stylesheet">
+@await Component.InvokeAsync("_Profile",new{id=@Model.Id})
+

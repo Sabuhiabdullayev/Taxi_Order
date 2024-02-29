@@ -1,0 +1,58 @@
+﻿
+@model List<ContactUsAllList>
+@{
+    ViewData["Title"] = "ContactUs All List";
+      Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+ <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="page-title mb-0 p-0">Taxi</h3>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/Admin/Order/AllList">Ana Seyfe</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Göndərilən mesaj Listəsi</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Ad</th>
+			<th>Email</th>
+			<th>Movzu</th>
+			<th>Mesaj</th>
+			<th>Tarix</th>
+			<th>Mesaja Göz At</th>
+			<th>Mesajı Sil</th>
+		</tr>
+		@foreach(var x in Model){
+	<tr>
+			<td>@x.Id</td>
+			<td>@x.Name</td>
+			<td>@x.Email</td>
+			<td>@x.Subject</td>
+			<td>@x.Content</td>
+			<td>@x.Date</td>
+			<td><a class="btn btn-info">Göz At</a></td>
+			<td><a class="btn btn-danger">sil</a></td>
+		</tr>
+		}
+	</table>            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+

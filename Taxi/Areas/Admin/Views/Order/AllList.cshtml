@@ -1,0 +1,118 @@
+﻿
+@model List<OrderAllList>
+@{
+    ViewData["Title"] = "Order All List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/search_filter.css" rel="stylesheet">
+ <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="page-title mb-0 p-0">Taxi</h3>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/Admin/Order/AllList">Ana Seyfe</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Bütün gediş Listəsi</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Haradan</th>
+			<th>Hara</th>
+			<th>Tarix</th>
+			<th>Nəqliyyat Növü</th>
+			<th>Gediş Haqqı</th>
+			<th>Elana Baxış</th>
+			<th>Elanı Sil</th>
+		</tr>
+		@foreach(var x in Model){
+	<tr>
+			<td>@x.Id</td>
+			<td>@x.FromWhere</td>
+			<td>@x.Where</td>
+			<td>@x.DateOfDeparture</td>
+			<td>@x.TransportationType</td>
+			<td>@x.Price</td>
+			<td><a href="/Order/Detail/@x.Id" class="btn btn-info">Elana Baxış</a></td>
+			<td><button class="btn btn-danger" data-id="@x.Id" id="delete">Sil</button></td>
+		</tr>
+		}
+	</table>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js" integrity="sha512-cAiOMQ6IleoiPyH2UGR2k9OCclUh6tFL6RMnFsH26pntGnKyNtjwFpD7CodlP/TvYz+F7vLoBJQmIgSvScdzQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+               <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+       <script src="~/js/find.js"></script>
+<script type="text/javascript">
+           $(document).ready(function () {
+    $("table").on('click', "tr #delete", function () {
+        var deletebtn = $(this);
+      
+        var deleteid = deletebtn.data("id");
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Elanı siləcəkmisiniz?",
+            text: "Bunu geriyə qaytara bilməyəcəksiniz!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Bəli, Silin!",
+            cancelButtonText: "Xeyir, Ləğv Edin!",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                  deletebtn.html("Silinir...");
+                $.ajax({
+                    type: "delete",
+                    dataType: "json",
+                    url: "/Member/Order/Delete/" + deleteid,
+                    success: function (func) {
+                        swalWithBootstrapButtons.fire({
+                            title: "Silindi!",
+                            text: "Elan silindi.",
+                            icon: "success"
+                        });
+                        deletebtn.parent().parent().remove();
+                    }
+                });
+
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire({
+                    title: "Ləğv edildi",
+                    text: "Elan silinmə ləğv olundu :)",
+                    icon: "error"
+                });
+            }
+        });
+    });
+});
+
+       </script>

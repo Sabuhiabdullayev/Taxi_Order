@@ -1,0 +1,62 @@
+.ordersettings{
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+z-index: 1;
+display: none;
+}
+.openSettings, .closeSettings{
+    position: absolute;
+    top: 3px;
+    left: 92%;
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+.openSettings i, .closeSettings i{
+    font-size: 18px;
+}
+.openSettings:focus ~.ordersettings{
+    display: block;
+}
+.ordersettings:hover{
+    display: block;
+}
+.ordersettings:focus{
+    display: block;
+}
+.closeSettings:focus ~.ordersettings{
+    display: none;
+}
+.row .ordersettings ul{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+.row .ordersettings ul li{
+    position: relative;
+    list-style: none;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+}
+
+.ordersettings ul li a{
+    font-size: 18px;
+    color: blue;
+}
+
+.ordersettings ul li a:hover{
+    box-shadow: none;
+}
+.ordersettings ul li i{
+    margin-right: 10px;
+}

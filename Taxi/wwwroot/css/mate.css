@@ -1,0 +1,123 @@
+.mate{
+    position: relative;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    
+}
+.mate h1{
+    position: relative;
+    text-align: center;
+}
+.mate ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.mate ul li{
+    position: relative;
+    padding: 12px;
+   list-style: none;
+   margin-bottom: 7px;
+}
+.mate ul li input{
+    position: relative;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(89, 89, 89);
+    width: 80%;
+}
+.mate ul li input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(26, 26, 25);
+    border-radius: 0%;
+}
+.mate ul li i{
+    position: relative;
+    font-size: 17px;
+    margin-right: 5px;
+}
+.mate .cartype img{
+    position: relative;
+    width: 90px;
+    height: 60px;
+    padding: 4px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    margin: 0 40px;
+    margin-top: 10px;
+}
+.mate .cartype .car, .mate .cartype .bus{
+        border: 1px solid rgb(168, 168, 168);
+}
+.mate .cartype .active{
+    border: 1px solid rgb(255, 98, 0);
+}
+.mate ul .datetime input{
+    width: 34%;
+}
+.mate ul .datetime .fa-location-dot{
+    margin-left: 15px;
+}
+.mate ul .fulltime b{
+    margin-right: 8%;
+}
+.mate ul .fulltime input{
+    width: 52%;
+}
+.mate ul .price b{
+    margin-right: 10px;
+}
+.mate ul .price input{
+    width: 35%;
+}
+
+.fromwherecity, .wherecity{
+    position: absolute;
+    margin-top: 4px;
+    width: 75%;
+    left: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 300px;
+    background-color: rgb(255, 255, 255);
+    z-index: 20;
+    border-radius: 3px;
+    display: none;
+}
+.fromwherecity ul li, .wherecity ul li{
+    position: relative;
+    margin-bottom: 10px;
+    list-style-type: none;
+    width: 90%;
+    border: 1px solid rgb(163, 153, 153);
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.fromwherecity ul li .fa-arrow-right-long, .wherecity ul li .fa-arrow-right-long{
+    position: relative;
+    float: right;
+    top: 2px;
+    left: -5px;
+}
+.Addloading{
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+@media (max-width:1100px){
+    .mate{
+        width: 100%;
+    }
+}

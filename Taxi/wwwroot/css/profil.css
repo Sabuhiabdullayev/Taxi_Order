@@ -1,0 +1,68 @@
+.profil{
+    position: relative;
+    padding: 20px;
+    width: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%);
+    background-color: rgb(208, 208, 208);
+}
+.profil h2{
+    position: relative;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: inherit;
+}
+.profil ul{
+    position: relative;
+    width: 100%;
+}
+.profil ul li{
+    position: relative;
+    width: 95%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: rgb(227, 229, 231);
+    list-style: none;
+    border-radius: 10px;
+    
+}
+.profil ul li .profilimg{
+    left: 50%;
+    transform: translate(-50%);
+    border: .3px solid red;
+}
+.profil ul li img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+.profil ul li input{
+    position: relative;
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+.profil ul li input:focus{
+    outline: none;
+    border: none;
+}
+.profil ul li i{
+    position: relative;
+    font-size: 18px;
+    margin-right: 10px;
+}
+@media (max-width:1000px){
+    .profil{
+        width: 100%;
+    }
+    .profil ul li input{
+        width: 85%;
+    }
+}

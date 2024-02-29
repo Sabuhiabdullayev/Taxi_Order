@@ -1,0 +1,61 @@
+﻿@model List<OrderAllList>
+@{
+    ViewData["Title"] = "Bütün Elanlarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}   <link href="~/css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/MyOrder.css">
+<h2 class="text-center">Bütün Elanlarım</h2>
+<div class="search">
+    <div class="allfilter"></div>
+    <div class="filter">
+      
+        <div class="all">
+            <div class="row">
+                @foreach(var x in Model){
+                       <div class="card">
+                    <button class="openSettings"><i class="fa-solid fa-bars"></i></button>
+                 <div class="ordersettings">
+                    <button class="closeSettings"><i class="fa-solid fa-bars-staggered"></i></button>
+                    <ul>
+                        <li> <a href="/Member/Order/Update/@x.Id"><i class="fa-solid fa-gear"></i>Elani Duzelis Et</a></li>
+                        <li>
+                          <button data-id="@x.Id" id="delete" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i> Elani Sil</button>
+                       </li>
+                    </ul>
+                   
+                   
+                 </div>
+                    <a href="/Order/Detail/@x.Id">
+                       <ul class="listdescription">
+                        <li class="price"> @x.Price ₼</li>
+                        <li class="fromwhere"> @x.FromWhere</li>
+                        <span class="fromwheredate">@x.FromWhereDate</span>
+                        <span class="fulltime">@x.FullHour</span>
+                        <span class="wheredate">@x.WhereDate</span>
+                        <b class="fromwherewhere"><i class="fa-solid fa-location-crosshairs"></i> <i class="fa-solid fa-location-dot"></i></b>
+                        <li class="where"> @x.Where  </li>
+                       </ul>
+                        @await Component.InvokeAsync("_OrderListFooterMemberImg",new{id=@x.AppUserId})
+            @if (x.TransportationType == "car")
+                            {
+                                <img src="~/img/car.png" alt="" class="cartype">
+
+                            }else if(x.TransportationType == "bus")
+                            {
+                                <img src="~/img/bus.png" alt="" class="cartype">
+                            }
+                    </a>
+                </div>   
+               
+                }
+              
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js" integrity="sha512-cAiOMQ6IleoiPyH2UGR2k9OCclUh6tFL6RMnFsH26pntGnKyNtjwFpD7CodlP/TvYz+F7vLoBJQmIgSvScdzQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+               <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+			<script type="text/javascript" src="~/js/myorder.js"></script>
+        </div>
+       
+    </div>
+   
+</div>

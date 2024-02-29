@@ -1,0 +1,33 @@
+﻿
+@model AppUser
+
+
+<div class="driver">
+    <div class="driverfullname">
+        <b class="name">@Model.Name </b>
+        <img src="@Model.img" alt="">
+        <span class="age">40yas</span>
+    </div>
+    <hr>
+    <div class="driverphoneall">
+        <span class="phone">Surucu Nomresi<span>@Model.PhoneNumber</span></span>
+    </div>
+    <hr class="bold">
+    <div class="drivercartype">
+        <span class="name"> Neqliyyat novu</span>
+        @if (Model.Transportationtype == "car")
+        {
+            <img src="~/img/car.png" alt="">
+        }else if (Model.Transportationtype == "bus")
+        {
+            <img src="~/img/bus.png" alt="">
+        }
+
+    </div>
+    <hr class="bold">
+    <div class="about">
+        <span class="orders"> butun gedisler: <span>(22)</span></span>
+        <span class="openingdate">Hesab acilma tarix: <span>@Model.DateOfPosting</span></span>
+    </div>
+    <hr class="bold">
+</div>

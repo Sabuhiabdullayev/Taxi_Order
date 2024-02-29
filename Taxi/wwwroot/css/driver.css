@@ -1,0 +1,117 @@
+.driver{
+    position: relative;
+    width: 60%;
+    max-height: 100%;
+    min-height: 60vh;
+    left: 50%;
+    transform:  translate(-50%);
+    padding: 10px;
+}
+.driver .bold{
+    position: relative;
+    height: 7px;
+    border-radius: 20px;
+    background-color: rgb(182, 174, 174);
+}
+.driver .driverfullname{
+    position: relative;
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+.driver .driverfullname .name{
+    position: relative;
+    font-size:25px;
+    top: 10px;
+}
+.driverfullname .age{
+    position: absolute;
+    font-size: 17px;
+    top: 60px;
+    left: 18px;
+}
+.driver .driverfullname img{
+    position: relative;
+    width: 110px;
+    height: 90px;
+    border-radius: 50%;
+    float: right;
+
+}
+.driver .driverphoneall{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+}
+.driver .driverphoneall .phone{
+    position: relative;
+    font-size: 18px;
+    top: 10px;
+}
+.driver .driverphoneall .phone span{
+    position: relative;
+    font-size: 18px;
+    margin-left: 5%;
+    color: black;
+    font-weight: bold;
+}
+.driver .drivercartype{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+  
+}
+.driver .drivercartype .name{
+    position: relative;
+    font-size: 20px;
+    top: 20px;
+}
+.driver .drivercartype img{
+    position: relative;
+    width: 100px;
+    height: 80px;
+    float: right;
+}
+.driver .about{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.driver .about .orders{
+    position: relative;
+    font-size: 20px;
+
+}
+.driver .about .orders span{
+    position: relative;
+    margin-left: 10px;
+    color: black;
+     font-weight: bold;
+}
+.driver .about .openingdate{
+    position: absolute;
+    font-size: 20px;
+    top: 50px;
+    left: 10px;
+    
+}
+.driver .about .openingdate span{
+    position: relative;
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+}
+@media (max-width:768px){
+    .driver{
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <link href="~/css/profil.css" rel="stylesheet">
+
+<div class="profil">
+        <h2 class="text-center">Hesab bilgileri duzeltme</h2>
+       <form  method="post" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <img src="@Model.img" alt="">
+                <input type="file" name="img" accept=".png, .jpeg" class="profilimg">
+            </li>
+            <li>
+                <i class="fa fa-user"></i>
+                <input type="text" name="Name" value="@Model.Name" placeholder="Ad">
+            </li>
+            <li>
+                <i class="fa-solid fa-at"></i>
+                <input type="email" name="Email" value="@Model.Email" placeholder="Email">
+            </li>
+            <li>
+                <i class="fa-solid fa-phone"></i>
+                <input data-mask="(___)-___-__-__" name="Phone" value="@Model.PhoneNumber"  type="tel" autocomplete="off" placeholder="000-000-00-00"/>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="date" name="Date" value="@Model.Date">
+            </li> 
+<li>
+    <button class="form-control btn-outline-info">Duzelis edin</button>
+</li>
+        </ul>
+        </form>
+    </div>

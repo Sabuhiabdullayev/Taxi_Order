@@ -1,0 +1,247 @@
+
+.search{
+    position: relative;
+   display: flex;
+} 
+.search .allfilter{
+position: relative;
+width: 50%;
+min-height: 90vh;
+}
+.search .filter{
+    position: relative;
+    width: 50%;
+}
+.listfilter{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+  
+}
+.btnall, .btncar, .btnbus{
+    position: relative;
+    padding: 6px;
+    margin-right: 5px;
+    width: 30%;
+    border: none;
+    background: none;
+}
+.active{
+    border-bottom: 1px solid red;
+   color: rgb(253, 0, 0);
+}
+.btncar i, .btnbus i{
+    position: relative;
+    margin-right: 15px;
+    font-size: 20px;
+   
+}
+.filter .all, .filter .car, .filter .bus{
+    position: relative;
+    width: 100%;
+}
+.filter .car, .filter .bus{
+    display: none;
+} 
+.card{
+    position: relative;
+    margin: 0%;
+    padding: 0%;
+    margin: 20px 25px;
+    width: 470px;
+    height: 200px;
+    background-color: rgb(253, 240, 255);
+    border-radius: 9px;
+
+}
+.search .card a{
+    position: relative;
+    width: 100%;
+    height: 200px;
+   border-radius: 9px;
+}
+.card a:hover{
+    box-shadow: 0.1px 0.1px 20px rgb(44, 41, 41);
+
+}
+
+.card a .listdescription{
+    position: relative;
+    margin-left: 65px;
+    padding: 10px;
+    float: left;
+    list-style: none;
+    border-radius: 9px;
+    width: 80%;
+}
+.card .cartype{
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+    width: 80px;
+    height: 60px;
+    float: right;
+}
+.fromwheredate{
+    position: absolute;
+    top: 7px;
+    left: -50px;
+    font-size: 20px;
+    color: rgb(32, 32, 32);
+}
+.wheredate{
+position: absolute;
+left: -50px;
+font-size: 20px;
+color: rgb(32, 32, 32);
+
+}
+.fulltime{
+    position: absolute;
+    left: -50px;
+    top: 44px;
+    font-size: 14px;
+    color: rgb(32, 32, 32);
+}
+.price{
+    position: relative;
+    padding: 1px 2px;
+    border-radius: 8px;
+    font-size: 25px;
+    font-size: bold;
+    float: right;
+    color: rgb(98, 98, 140);
+}
+
+.fromwhere{
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: rgb(27, 26, 26);
+}
+
+.where{
+    position: relative;
+    margin-left: 26px;
+    font-size: 18px;
+    color: rgb(27, 26, 26);
+
+}
+.fromwherewhere{
+    position: absolute;
+    margin-top: -18px;
+    margin-left: -7px;
+    width: 35px;
+    height: 4px;
+    background-color:rgb(116, 115, 115);
+    transform: rotate(90deg);
+}
+  .fromwherewhere .fa-location-crosshairs{
+    position: relative;
+    left: -20px;
+    top: -10px;
+   transform: rotate(90deg);
+   color: rgb(116, 115, 115);
+}
+.fromwherewhere .fa-location-dot{
+    position: relative;
+    right: -20px;
+    top: -10px;
+   transform: rotate(-90deg);
+    color: rgb(116, 115, 115);
+}
+
+
+.card a .searchlistimg{
+    position: relative;
+    margin-left: 10px;
+    top: -10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.drivername{
+    position: relative;
+ margin-left: 10px;
+    margin-top: 15px;
+    width: 100px;
+    text-align: center;
+    
+    color: black;
+}
+@media (max-width: 1200px){
+    .search .allfilter{
+  width: 50%;
+    }
+    .search .filter{
+        position: relative;
+        width: 50%;
+    }
+   
+}
+@media (max-width: 1101.98px){
+   .search .allfilter{
+    width: 40%;
+   }
+    .search .filter{
+        position: relative;
+      width: 60%;
+    }
+}
+@media (max-width: 891.98px){
+    .search .allfilter{
+        width: 30%;
+       }
+    .search .filter{
+        position: relative;
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+     .search{
+        position: relative;
+        width: 100%;
+     }
+     .search .filter{
+        position: relative;
+        width: 100%;
+     }
+     .search .row{
+        width: 100%;
+     }
+ .card{
+    position: relative;
+    padding: 0%;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(253, 240, 255);
+    border-radius: 9px;
+
+}
+.card a{
+    position: relative;
+    width: 100%;
+    height: 200px;
+   border-radius: 9px;
+}
+.fromwhere, .where{
+    font-size: 15px;
+}
+.search .card .price{
+    right: 10px;
+}
+.card a .searchlistimg{
+    position: relative;
+    margin-left: 10px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.drivername{
+    font-size: 15px;
+    top: 25px;
+}
+}

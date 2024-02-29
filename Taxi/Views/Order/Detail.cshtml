@@ -1,0 +1,52 @@
+﻿@model OrderAllList
+
+     <link href="~/css/detail.css" rel="stylesheet">
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="detail">
+    <div class="fulldate">@Model.DateOfDeparture</div>
+    <hr>
+<div class="fromwherefull">
+<span class="fromwheredate">@Model.FromWhereDate</span>
+<span class="fulltime">@Model.FullHour</span>
+<span class="wheredate">@Model.WhereDate</span>
+<b class="fromwherewhere"><i class="fa-solid fa-location-crosshairs"></i> <i class="fa-solid fa-location-dot"></i></b>
+<div class="fromwhere">@Model.FromWhere</div>
+<div class="where">@Model.Where</div>
+</div>
+<hr>
+<div class="fullprice">
+    <span class="name">Gediş Haqqı</span>
+    <span class="price">@Model.Price ₼</span>
+</div>
+<hr>
+<div class="cartypefull">
+    <span class="name">Gidəcəyiniz nəqliyyat növü</span>
+        @if (Model.TransportationType == "bus")
+        {
+            <img src="~/img/bus.png"  class="cartype">
+        }
+        else if(Model.TransportationType == "car")
+        {
+             <img src="~/img/car.png" class="cartype">
+        }
+
+</div>
+<hr>
+<div class="driverphonefull">
+    <span class="name">Sürücü nömrəsi</span>
+    <b class="phone1"><i class="fa-solid fa-phone"></i> @Model.Phone</b>
+</div>
+<hr>
+<div class="driverfull">
+   @await Component.InvokeAsync("_DetailDriver",new{id=@Model.AppUserId})
+</div>
+<hr>
+<div class="warning">
+    <i class="fa-solid fa-triangle-exclamation"></i>  Ödənişinizi sürücünü görmədən karta atmayınız...
+</div>
+</div>

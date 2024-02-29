@@ -1,0 +1,8 @@
+﻿
+@model List<AppUser>
+
+	@foreach(var x in Model){
+		   <img src="@x.img" alt="" class="searchlistimg">
+                       <span class="drivername">@x.Name</span>
+	}
+

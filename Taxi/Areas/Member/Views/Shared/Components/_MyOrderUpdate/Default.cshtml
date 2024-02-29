@@ -1,0 +1,64 @@
+﻿@model OrderAllList
+
+<div class="mate">
+	<h1>Elanı Düzəliş Etmə</h1>
+	<ul>
+		<li class="fromwhere">
+			<i class="fa-solid fa-location-crosshairs"></i>
+			<input type="text" id="FromWhere" class="fromwhereinput" value="@Model.FromWhere" placeholder="Haradan">
+			<div class="fromwherecity"></div>
+		</li>
+		<li class="where">
+			<i class="fa-solid fa-location-dot"></i>
+			<input type="text" id="Where" class="whereinput" value="@Model.Where" placeholder="Hara">
+			<div class="wherecity"></div>
+		</li>
+		<li class="where">
+			<i class="fa-solid fa-phone"></i>
+			<input data-mask="(___)-___-__-__" id="Phone" value="@Model.Phone" type="tel" autocomplete="off" placeholder="000-000-00-00" />
+		</li>
+		<li>
+			<i class="fa-solid fa-calendar-days"></i>
+			<input type="date" id="Date" value="@Model.DateOfDeparture">
+		</li>
+		<li class="datetime">
+			<i class="fa-solid fa-location-crosshairs"></i>
+			<input type="time" id="FromWhereDate" value="@Model.FromWhereDate">
+			<i class="fa-solid fa-location-dot"></i>
+			<input type="time" id="WhereDate" value="@Model.WhereDate">
+		</li>
+		<li class="fulltime">
+			<b> <i class="fa-regular fa-clock"></i>Tam vaxt:</b>
+			<input type="text" placeholder="4s 20" id="FullHour" value="@Model.FullHour" maxlength="6">
+		</li>
+		<li class="price">
+			<b><i class="fa-solid fa-money-bill-1-wave"></i> çatdırılma haqqı:</b>
+			<input type="number" min="1" max="500" value="@Model.Price" id="Price" placeholder="22₼">
+		</li>
+		<li class="cartype">
+			<b><i class="fa fa-car"></i> Nəqliyyat növü:</b>
+			@if (Model.TransportationType == "car")
+			{
+				<img src="~/img/car.png" alt="car" class="car active">
+			}
+			else
+			{
+				<img src="~/img/car.png" alt="car" class="car">
+			}
+			@if (Model.TransportationType == "bus")
+			{
+				<img src="~/img/bus.png" alt="bus" class="bus active">
+			}
+			else
+			{
+				<img src="~/img/bus.png" alt="bus" class="bus">
+			}
+		</li>
+		<li><button class="form-control btn btn-outline-primary" data-id="@Model.Id" id="btnUpdate">DÜZƏLİŞ EDİN</button></li>
+	</ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js" integrity="sha512-cAiOMQ6IleoiPyH2UGR2k9OCclUh6tFL6RMnFsH26pntGnKyNtjwFpD7CodlP/TvYz+F7vLoBJQmIgSvScdzQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/meta.js"></script>
+<script src="~/js/find.js"></script>

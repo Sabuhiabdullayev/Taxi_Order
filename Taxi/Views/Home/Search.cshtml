@@ -1,0 +1,152 @@
+﻿@model List<OrderAllList>   
+  
+<link href="~/css/search.css" rel="stylesheet">
+<link href="~/css/search_filter.css" rel="stylesheet">
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <form asp-action="Search" asp-controller="Home" method="get">
+            <div class="CarSearch">
+                <div class="fromwhere">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <input type="text" name="FromWhere" class="fromwhereinput" value="@ViewBag.FromWhere" placeholder="Haradan">
+                    <img src="~/img/loading.gif" class="fromwhereloading" alt="">
+                    <div class="fromwherecity">
+                    </div>
+                </div>
+                <div class="where">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="Where" class="whereinput" value="@ViewBag.Where" placeholder="Hara">
+                    <img src="~/img/loading.gif" class="whereloading" alt="">
+                    <div class="wherecity">
+                    </div>
+                </div>
+                <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <input type="date" name="Date" value="@ViewBag.Date" id="Date">
+                </div>
+                <div class="numberofpeople">
+                    <span class="numberofpeopleminus">-</span>
+                    <i class="fa fa-user"></i>
+                    <input type="number" placeholder="1" min="1" max="20" disabled>
+                    <span class="numberofpeopleplus">+</span>
+                </div>
+                <div class="searchbtn">
+                    <button> Axtarin</button>
+                </div>
+            </div>
+        </form>
+<div class="search">
+    <div class="allfilter"></div>
+    <div class="filter">
+        <div class="listfilter">
+            <button class="btnall active">Hamisi</button>
+            <button class="btncar"><i class="fa-solid fa-car"></i> Masin</button>
+            <button class="btnbus"><i class="fa-solid fa-bus"></i> avtobus</button>
+        </div>
+        <div class="all">
+
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                      <div class="card">
+                    <a href=/Order/Detail/"@item.Id">
+                       <ul class="listdescription">
+                        <li class="price"> @item.Price ₼</li>
+                        <li class="fromwhere"> @item.FromWhere</li>
+                        <span class="fromwheredate">@item.FromWhereDate</span>
+                        <span class="fulltime">@item.FullHour</span>
+                        <span class="wheredate">@item.WhereDate</span>
+                        <b class="fromwherewhere"><i class="fa-solid fa-location-crosshairs"></i> <i class="fa-solid fa-location-dot"></i></b>
+                        <li class="where"> @item.Where  </li>
+                       </ul>
+                                          @await Component.InvokeAsync("_OrderListFooterMemberImg",new{id=@item.AppUserId})
+           @if (item.TransportationType == "car")
+                            {
+                                <img src="~/img/car.png" alt="" class="cartype">
+
+                            }else if(item.TransportationType == "bus")
+                            {
+                                <img src="~/img/bus.png" alt="" class="cartype">
+                            }
+                    </a>
+                </div>   
+                }
+           
+               </div>
+        </div>
+        <div class="car">
+            <div class="row">
+                  @foreach (var item in Model)
+                {
+                    @if(@item.TransportationType=="car"){
+
+                    
+                      <div class="card">
+                    <a href=/Order/Detail/"@item.Id">
+                       <ul class="listdescription">
+                        <li class="price"> @item.Price ₼</li>
+                        <li class="fromwhere"> @item.FromWhere</li>
+                        <span class="fromwheredate">@item.FromWhereDate</span>
+                        <span class="fulltime">@item.FullHour</span>
+                        <span class="wheredate">@item.WhereDate</span>
+                        <b class="fromwherewhere"><i class="fa-solid fa-location-crosshairs"></i> <i class="fa-solid fa-location-dot"></i></b>
+                        <li class="where"> @item.Where  </li>
+                       </ul>
+                                          @await Component.InvokeAsync("_OrderListFooterMemberImg",new{id=@item.AppUserId})
+           @if (item.TransportationType == "car")
+                            {
+                                <img src="~/img/car.png" alt="" class="cartype">
+
+                            }else if(item.TransportationType == "bus")
+                            {
+                                <img src="~/img/bus.png" alt="" class="cartype">
+                            }
+                    </a>
+                </div>   
+                }
+                }
+               </div>
+        </div>
+        <div class="bus">
+            <div class="row">
+                  @foreach (var item in Model)
+                {
+                    @if(@item.TransportationType=="bus"){
+
+                    
+                      <div class="card">
+                    <a href=/Order/Detail/"@item.Id">
+                       <ul class="listdescription">
+                        <li class="price"> @item.Price ₼</li>
+                        <li class="fromwhere"> @item.FromWhere</li>
+                        <span class="fromwheredate">@item.FromWhereDate</span>
+                        <span class="fulltime">@item.FullHour</span>
+                        <span class="wheredate">@item.WhereDate</span>
+                        <b class="fromwherewhere"><i class="fa-solid fa-location-crosshairs"></i> <i class="fa-solid fa-location-dot"></i></b>
+                        <li class="where"> @item.Where  </li>
+                       </ul>
+                                          @await Component.InvokeAsync("_OrderListFooterMemberImg",new{id=@item.AppUserId})
+           @if (item.TransportationType == "car")
+                            {
+                                <img src="~/img/car.png" alt="" class="cartype">
+
+                            }else if(item.TransportationType == "bus")
+                            {
+                                <img src="~/img/bus.png" alt="" class="cartype">
+                            }
+                    </a>
+                </div>   
+                }
+                }
+               </div>
+        </div>
+    </div>
+ 
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+		<script src="~/lib/jquery/dist/jquery.js"></script>	
+       <script src="~/js/find.js"></script>

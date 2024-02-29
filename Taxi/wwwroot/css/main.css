@@ -1,0 +1,392 @@
+.contanier{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 200px;
+}
+.contanier .Home_Img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85%;
+    height: 280px;
+    margin-top: 5px;
+}
+.CarSearch{
+    position: relative;
+    display: flex;
+    padding: 10px 1px;
+    width: 80%;
+    height: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(232, 230, 230);
+    top: -110px;
+    border-radius: 15px 15px 15px 15px ;
+}
+.CarSearch .fromwhere{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(232, 230, 230);
+border-right: 1px solid rgb(125, 124, 124);
+}
+
+.CarSearch .fromwhere input{
+    position: relative;
+    padding-left: 40px;
+    width: 87%;
+    height: 100%;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(232, 230, 230);
+
+}
+.CarSearch .fromwhere input:focus{
+    border: none;
+    outline: none;
+}
+.CarSearch .fromwhere i{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+.CarSearch .fromwhere .fromwhereloading{
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+display: none;
+float: right;
+}
+.fromwherecity, .wherecity{
+    position: absolute;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgb(232, 230, 230);
+    z-index: 20;
+    border-radius:3px;
+    display: none;
+}
+.fromwherecity ul li, .wherecity ul li{
+    position: relative;
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 15px;
+    left: -15px;
+    width: 100%;
+    border: 1px solid rgb(163, 153, 153);
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.fromwherecity ul li .fa-arrow-right-long, .wherecity ul li .fa-arrow-right-long{
+    position: relative;
+    float: right;
+    top: 2px;
+    left: -5px;
+}
+.CarSearch .where{
+    position: relative;
+    width: 30%;
+    height: 40px;
+background-color: rgb(232, 230, 230);
+border-right: 1px solid rgb(125, 124, 124);
+}
+.CarSearch .where input{
+    position: relative;
+    padding-left: 40px;
+    width: 87%;
+    height: 100%;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(232, 230, 230);
+}
+.CarSearch .where input:focus{
+    border: none;
+    outline: none;
+}
+.CarSearch .where i{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.CarSearch .where .whereloading{
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+display: none;
+float: right;
+}
+.date{
+    position: relative;
+    width: 13%;
+    height: 40px;
+    border-right: 1px solid rgb(125, 124, 124);
+
+}
+.date input{
+    position: relative;
+    padding-left: 40px;
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(232, 230, 230);
+}
+.date input:focus{
+    border: none;
+    outline: none;
+}
+.date i{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.CarSearch .numberofpeople{
+    position: relative;
+    width: 13%;
+    height: 40px;
+}
+.CarSearch .numberofpeople input{
+    position: relative;
+left: 30px;
+    width: 40%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgb(232, 230, 230);
+}
+.CarSearch .numberofpeople i{
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 28px;
+    font-size: 20px;
+}
+.CarSearch .numberofpeople .numberofpeopleminus{
+    position: relative;
+    top: -2px;
+    font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+
+}
+.CarSearch .numberofpeople .numberofpeopleplus{
+    position: relative;
+    border: none;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.CarSearch .numberofpeople input:focus{
+    border: none;
+    outline: none;
+}
+.CarSearch .searchbtn{
+    position: relative;
+    top: -2px;
+    width: 13%;
+}
+.CarSearch .searchbtn button{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(9, 69, 158);
+    color: white;
+}
+.CarSearch .searchbtn i{
+    position: relative;
+    margin-right: 10px;
+    font-size: 15px;
+}
+@media (max-width: 991.98px){
+    .contanier .Home_Img{
+        display: none;
+    }
+    .CarSearch{
+        position: relative;
+        display: block;
+        padding: 10px;
+        width: 80%;
+        min-height:250px;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: rgb(232, 230, 230);
+        top: 170px;
+        border-radius: 15px 15px 15px 15px ;
+    }
+    .CarSearch .fromwhere{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: rgb(232, 230, 230);
+    }
+    .CarSearch .where{
+        position: relative;
+        width: 100%;
+        height: 40px;
+    background-color: rgb(232, 230, 230);
+    }
+    .date{
+        position: relative;
+        width: 100%;
+        height: 40px;
+    
+    }
+    .CarSearch .searchbtn{
+        position: relative;
+        top: -2px;
+        width: 100%;
+    }
+    .CarSearch .numberofpeople{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: rgb(232, 230, 230);
+    }
+    .CarSearch .fromwhere, .CarSearch .where, .CarSearch .date, .CarSearch .CarSearch .numberofpeople{
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border-right: none;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-bottom: 1px solid rgb(49, 49, 49);
+    }
+    .CarSearch .fromwhere .whereloading{
+        position: absolute;
+        top: -5px;
+        left: 93%;
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+    }
+    .CarSearch .where .whereloading{
+        position: absolute;
+        top: -5px;
+        left: 93%;
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+    }
+    .CarSearch .CarSearch .numberofpeople{
+        border-bottom: none;
+    }
+    .CarSearch .numberofpeople input{
+        position: relative;
+        top: -5px;
+        width: 80%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        font-size: 35px;
+      padding-left: 280px;
+    }
+    .CarSearch .numberofpeople i{
+        position: relative;
+        z-index: 1;
+        top: -10px;
+        left: 280px;
+        font-size: 20px;
+    }
+    .CarSearch .numberofpeople .numberofpeopleminus{
+        position: relative;
+        padding: 0 16px;
+        top: -10px;
+        border: 1px solid rgb(56, 56, 56);
+        font-size: 25px;
+        border-radius: 50%;
+        background: none;
+    
+    }
+    .CarSearch .numberofpeople .numberofpeopleplus{
+        position: relative;
+        padding: 0 16px;
+        top: -10px;
+        border: 1px solid rgb(56, 56, 56);
+        font-size: 25px;
+        border-radius: 50%;
+        background: none;
+    
+    }
+}
+@media (max-width: 768px) {
+    .CarSearch .fromwhere .whereloading{
+        position: absolute;
+        top: -5px;
+        left: 90%;
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+    }
+    .CarSearch .where .whereloading{
+        position: absolute;
+        top: -5px;
+        left: 90%;
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+    }
+    .CarSearch .numberofpeople input{
+        position: relative;
+        top: -5px;
+        width: 60%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        font-size: 35px;
+      padding-left: 80px;
+    }
+    .CarSearch .numberofpeople i{
+        position: relative;
+        z-index: 1;
+        top: -10px;
+        left: 80px;
+        font-size: 20px;
+    }
+    .CarSearch .numberofpeople .numberofpeopleminus{
+        position: relative;
+        padding: 0 16px;
+        top: -10px;
+        border: 1px solid rgb(56, 56, 56);
+        font-size: 25px;
+        border-radius: 50%;
+        background: none;
+    
+    }
+    .CarSearch .numberofpeople .numberofpeopleplus{
+        position: relative;
+        padding: 0 16px;
+        top: -10px;
+        border: 1px solid rgb(56, 56, 56);
+        font-size: 25px;
+        border-radius: 50%;
+        background: none;
+    
+    }
+}

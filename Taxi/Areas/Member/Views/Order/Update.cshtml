@@ -1,0 +1,10 @@
+﻿@model OrderAllList
+
+@{
+	ViewData["Title"] = "Elanı Düzəliş Etmə";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/mate.css" rel="stylesheet">
+@await Component.InvokeAsync("_MyOrderUpdate",new{id=@Model.Id})
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js" integrity="sha512-cAiOMQ6IleoiPyH2UGR2k9OCclUh6tFL6RMnFsH26pntGnKyNtjwFpD7CodlP/TvYz+F7vLoBJQmIgSvScdzQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

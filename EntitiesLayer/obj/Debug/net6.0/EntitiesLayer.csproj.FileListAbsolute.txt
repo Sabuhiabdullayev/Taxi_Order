@@ -1,0 +1,12 @@
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\bin\Debug\net6.0\EntitiesLayer.deps.json
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\bin\Debug\net6.0\EntitiesLayer.dll
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\bin\Debug\net6.0\EntitiesLayer.pdb
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.csproj.AssemblyReference.cache
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.AssemblyInfoInputs.cache
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.AssemblyInfo.cs
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.csproj.CoreCompileInputs.cache
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.dll
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\ref\EntitiesLayer.dll
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\EntitiesLayer.pdb
+D:\Asp.Net Core Projects\Taxi\EntitiesLayer\obj\Debug\net6.0\refint\EntitiesLayer.dll

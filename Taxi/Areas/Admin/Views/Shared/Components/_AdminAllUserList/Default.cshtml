@@ -1,0 +1,29 @@
+﻿@model List<AppUser>
+
+<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Şəkili</th>
+			<th>İstifadəçi Adı</th>
+			<th>Adı</th>
+			<th>Email</th>
+			<th>Doğum-Tarixi</th>
+			<th>Hesab-Açılma</th>
+			<th>Hesaba Baxış</th>
+			<th>Hesabı Sil</th>
+		</tr>
+		@foreach(var x in Model){
+	<tr>
+			<td>@x.Id</td>
+			<td><img src="@x.img" style="width:80px;height:80px;border-radius:50%; padding:2px"></td>
+			<td>@x.UserName</td>
+			<td>@x.Name</td>
+			<td>@x.Email</td>
+			<td>@x.Date</td>
+			<td>@x.DateOfPosting</td>
+			<td><a href="/User/Driver/@x.UserName" class="btn btn-info">Hesaba Baxış</a></td>
+			<td><a class="btn btn-danger">Sil</a></td>
+		</tr>
+		}
+	</table>
+
